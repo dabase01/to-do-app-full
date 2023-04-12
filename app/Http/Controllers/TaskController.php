@@ -32,8 +32,8 @@ class TaskController extends Controller
         if (!$task) {
         return response()->json(['error' => 'Task not  not found'], 404);
         }
-        $task->update($request->all());
-        return $task;
+        $task->delete();
+        return 'Succesful deleted';
 }  
     
 }
